@@ -1,5 +1,13 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
+html,body{
+    height: 100%;
+}
+
+html,body{
+    min-height: 100%;
+}
+
 table{
     tbody,thead{
         tr{
@@ -18,6 +26,7 @@ table{
     tbody{
         td{
             border-right: 1px solid #ddd;
+            cursor: pointer;
         }
     }
 }

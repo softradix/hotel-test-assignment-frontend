@@ -4,6 +4,7 @@ import moment from "moment";
 import Modal from "./components/Modal";
 import EditForm from "./components/EditForm";
 import _map from "lodash/map";
+import Alert from "./components/Alert";
 
 const App = () => {
   const [listData, setListData] = React.useState("");
@@ -58,8 +59,6 @@ const App = () => {
                 <td>{list.room_number}</td>
                 {_map(list.price, (price) => (
                   <td
-                    data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop"
                     key={price.id}
                     onClick={() =>
                       getPrice({
@@ -92,6 +91,7 @@ const App = () => {
           />
         </Modal>
       )}
+      <Alert />
     </div>
   );
 };
