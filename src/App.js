@@ -1,10 +1,9 @@
+import _map from "lodash/map";
+import moment from "moment";
 import React from "react";
 import "./App.scss";
-import moment from "moment";
-import Modal from "./components/Modal";
 import EditForm from "./components/EditForm";
-import _map from "lodash/map";
-import Alert from "./components/Alert";
+import Modal from "./components/Modal";
 
 const App = () => {
   const [listData, setListData] = React.useState("");
@@ -30,7 +29,6 @@ const App = () => {
     const res = await fetch(url, options);
     const data = await res.json();
     setListData(data.data);
-    console.log(listData);
   };
 
   React.useEffect(() => {
@@ -80,7 +78,7 @@ const App = () => {
         </table>
       </div>
       {modal && (
-        <Modal title="Edit Details" modal={modal}>
+        <Modal title="Edit Details">
           <EditForm
             price={price}
             setPrice={setPrice}
@@ -91,7 +89,6 @@ const App = () => {
           />
         </Modal>
       )}
-      <Alert />
     </div>
   );
 };

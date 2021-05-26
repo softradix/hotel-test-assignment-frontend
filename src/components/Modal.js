@@ -1,9 +1,9 @@
 import React from "react";
 
-const Modal = ({ title, children, modal }) => {
+const Modal = ({ title, children }) => {
   return (
     <React.Fragment>
-      {modal && <div class="backdrop"></div>}
+      <div class="backdrop"></div>
       <div
         className="modal fade show"
         id="staticBackdrop"

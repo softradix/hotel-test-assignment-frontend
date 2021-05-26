@@ -29,8 +29,6 @@ const EditForm = ({
     updateData();
   };
 
-  console.log("value", price);
-
   return (
     <form onSubmit={formSubmit}>
       <div className="mb-3">
