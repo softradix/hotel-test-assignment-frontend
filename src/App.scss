@@ -1,0 +1,48 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+table{
+    tbody,thead{
+        tr{
+            td,th{
+                &:first-child{
+                    position: sticky;
+                    background-color: #fff;
+                    z-index: 2;
+                    left: 0;
+                    white-space: nowrap;
+                    border-right: 1px solid #ddd;
+                }
+            }
+        }
+    }
+    tbody{
+        td{
+            border-right: 1px solid #ddd;
+        }
+    }
+}
+
+.whitespace-nowrap{
+    white-space: nowrap;
+}
+
+.modal{
+    &.show{
+        display: block
+    }
+}
+
+.modal-backdrop{
+    display: none;
+}
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.5;
+}
